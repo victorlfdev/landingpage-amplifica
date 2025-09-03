@@ -3,97 +3,183 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amplifica</title>
+  <meta name="description" content="Amplifica - Marketing, audiovisual e estratégias digitais para amplificar sua marca.">
+  <meta name="keywords" content="marketing digital, audiovisual, produção de vídeo, campanhas digitais, gestão de redes sociais">
+  <meta property="og:title" content="Amplifica - Amplificando ideias">
+  <meta property="og:description" content="Marketing, audiovisual e estratégias digitais para sua marca crescer.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Amplifica | Marketing e Audiovisual</title>
+  <link rel="shortcut icon" href="./Imagens/Icone branco.webp" type="image/x-icon">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="/fonts/Salvatore.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
   <style>
     body { font-family: 'Inter', sans-serif; }
     html { scroll-behavior: smooth; }
+    .font-salvatore { font-family: 'Salvatore', sans-serif;}
   </style>
 </head>
-<body id="amplifica" class="bg-gradient-to-tr from-black from-45% to-[#4E3300] text-gray-900">
+<body id="amplifica" class="relative text-gray-200">
+
+  <!-- Botão Flutuante Instagram -->
+<a href="https://www.instagram.com/amplifica.estudio" target="_blank" 
+   class="fixed bottom-6 right-6 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 
+          p-4 rounded-full shadow-lg hover:scale-110 transition transform z-50">
+  <!-- Ícone do Instagram -->
+  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" 
+       viewBox="0 0 24 24" class="w-7 h-7 text-white">
+    <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zm4.5 3a5.5 5.5 0 1 1 0 11a5.5 5.5 0 0 1 0-11zm0 2a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7zm5.25-.88a1.12 1.12 0 1 1-2.25 0a1.12 1.12 0 0 1 2.25 0z"/>
+  </svg>
+</a>
+
+  
+  <!-- Vídeo de fundo -->
+  <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover -z-20">
+    <source src="./Imagens/background.webm" type="video/webm">
+    <source src="./Imagens/background.mp4" type="video/mp4">
+    Seu navegador não suporta vídeos em background.
+  </video>
+  <div class="absolute inset-0 bg-black/60 -z-10"></div>
+
   
   <!-- Header fixo -->
-  <header class="sticky top-0 z-20 flex justify-between items-center px-6 py-4 bg-black/70 backdrop-blur-md">
-    <a href="#amplifica"><img src="./Imagens/Tipografia branco.png" alt="Amplifica" class="h-10"></a>
+  <header class="sticky top-5 z-20 flex justify-between items-center px-12 py-4 bg-black/30 backdrop-blur-md ml-40 mr-40 rounded-full shadow-lg">
+    <a href="#amplifica" aria-label="Ir para o topo">
+      <img id="amplifica" src="./Imagens/Tipografia branco.webp" alt="Tipografia da Amplifica" class="h-10">
+    </a>
     <nav class="space-x-6 text-gray-200 font-normal text-lg hidden md:flex">
-      <a href="#servicos" class="hover:text-gray-300">Serviços</a>
-      <a href="#portfolio" class="hover:text-gray-300">Portfólio</a>
-      <a href="#contato" class="hover:text-gray-300">Contato</a>
+      <a href="#servicos" aria-label="Ir para serviços" class="hover:text-gray-300">Serviços</a>
+      <a href="#portfolio" aria-label="Ir para portfólio" class="hover:text-gray-300">Portfólio</a>
+      <a href="#contato" aria-label="Ir para contato" class="hover:text-gray-300">Contato</a>
     </nav>
-    <a href="#contato" class="px-4 py-2 bg-yellow-500 text-black font-semibold rounded-lg shadow hover:bg-yellow-600">
+    <a href="https://wa.me/5511919837497" class="px-4 py-2 bg-yellow-500 text-black font-semibold rounded-lg shadow hover:bg-yellow-600">
       Quero Amplificar
     </a>
   </header>
 
-  <!-- Hero -->
-  <section class="text-center py-24 px-6 text-gray-200">
-    <h1 class="text-5xl font-bold mb-6">Amplificando ideias, criando conexões</h1>
-    <p class="text-lg mb-8 max-w-2xl mx-auto">
-      Marketing, audiovisual e estratégias digitais para sua marca crescer
-    </p>
-    <a href="#contato" class="px-6 py-3 bg-gray-200 text-gray-900 font-semibold rounded-lg shadow hover:bg-gray-300">
-      Falar com a Amplifica
-    </a>
-  </section>
+<!-- Hero -->
+<section class="relative min-h-[50vh] flex flex-col justify-center items-center text-center px-6 mt-40 mb-40 text-gray-200">
+  <!-- Ícone branco atrás -->
+  <img id="logo" src="./Imagens/Icone branco.webp" 
+       alt="Logo da Amplifica"
+       loading="lazy"
+       class="absolute inset-0 m-auto opacity-20 max-h-[40vh] -z-10 pl-16" />
+  
+  <!-- Conteúdo Hero -->
+  <h1 class="font-salvatore text-5xl font-bold mb-6 relative z-10">
+    Amplificando ideias, criando conexões
+  </h1>
+  <p class="text-lg mb-8 max-w-2xl mx-auto relative z-10">
+    Marketing, audiovisual e estratégias digitais para sua marca crescer
+  </p>
+  <a href="#contato"
+     class="px-6 py-3 bg-gray-200/80 text-gray-900 font-semibold rounded-lg shadow hover:bg-yellow-500 relative z-10">
+    Falar com a Amplifica
+  </a>
+</section>
 
-  <!-- Serviços -->
-  <section id="servicos" class="py-20 px-6 max-w-6xl mx-auto">
-    <h2 class="text-3xl font-bold text-center mb-12 text-gray-200">Nossos Serviços</h2>
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="p-6 bg-gray-200 rounded-xl shadow hover:scale-105 hover:shadow-lg transition-transform duration-300 hover:bg-yellow-500">
-        <h3 class="font-semibold text-xl mb-2">Gestão de Redes</h3>
-        <p>Estratégias para engajamento e crescimento da sua audiência.</p>
+<!-- Serviços -->
+<section data-aos="fade-up" id="servicos" class="py-20 px-6 max-w-6xl mx-auto">
+  <h2 class="font-salvatore text-3xl font-bold text-center mb-12 text-gray-200 mt-12">
+    Nossos Serviços
+  </h2>
+  <div  class="grid md:grid-cols-3 gap-8">
+
+    <!-- Gestão de Redes -->
+    <div  class="text-gray-200 p-8 bg-gray-200/10 border-[1px] border-gray-300/10 rounded-xl shadow hover:scale-105 hover:shadow-lg transition-transform duration-300 hover:bg-yellow-500">
+      <!-- Ícone -->
+      <div class="flex justify-center mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 8a6 6 0 11-12 0 6 6 0 0112 0zM12 14v7m-4-4h8" />
+        </svg>
       </div>
-      <div class="p-6 bg-gray-200 rounded-xl shadow hover:scale-105 hover:shadow-lg transition-transform duration-300 hover:bg-yellow-500">
-        <h3 class="font-semibold text-xl mb-2">Produção Audiovisual</h3>
-        <p>Vídeos e fotos profissionais para destacar sua marca.</p>
-      </div>
-      <div class="p-6 bg-gray-200 rounded-xl shadow hover:scale-105 hover:shadow-lg transition-transform duration-300 hover:bg-yellow-500">
-        <h3 class="font-semibold text-xl mb-2">Campanhas Digitais</h3>
-        <p>Anúncios e tráfego pago focados em resultados reais.</p>
-      </div>
+      <h3 class="font-semibold text-xl mb-3 text-center">Gestão de Redes</h3>
+      <p class="text-center">
+        Criamos estratégias personalizadas para aumentar engajamento e relevância. 
+        Desde o planejamento até a análise de métricas, cuidamos de toda a gestão 
+        para sua marca se destacar no digital.
+      </p>
     </div>
-  </section>
+
+
+    <!-- Produção Audiovisual -->
+    <div class="text-gray-200 p-8 bg-gray-200/10 border-[1px] border-gray-300/10 rounded-xl shadow hover:scale-105 hover:shadow-lg transition-transform duration-300 hover:bg-yellow-500">
+      <!-- Ícone -->
+      <div class="flex justify-center mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14m0 0V10m0 4l-4 2m4-2l-4-2m0 0V8m0 4v4" />
+        </svg>
+      </div>
+      <h3 class="font-semibold text-xl mb-3 text-center">Produção Audiovisual</h3>
+      <p class="text-center">
+        Desenvolvemos vídeos e fotografias profissionais que contam histórias, 
+        emocionam e fortalecem a presença da sua marca. 
+        Da ideia ao produto final, entregamos qualidade e impacto visual.
+      </p>
+    </div>
+
+    <!-- Campanhas Digitais -->
+    <div class="text-gray-200 p-8 bg-gray-200/10 border-[1px] border-gray-300/10 rounded-xl shadow hover:scale-105 hover:shadow-lg transition-transform duration-300 hover:bg-yellow-500">
+      <!-- Ícone -->
+      <div class="flex justify-center mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17a4 4 0 01-8 0V5a2 2 0 012-2h14a2 2 0 012 2v6a4 4 0 01-8 0H7v6a2 2 0 002 2h2z" />
+        </svg>
+      </div>
+      <h3 class="font-semibold text-xl mb-3 text-center">Campanhas Digitais</h3>
+      <p class="text-center">
+        Planejamos e executamos anúncios online com foco em performance. 
+        Trabalhamos com tráfego pago e segmentação para gerar leads, aumentar vendas 
+        e trazer resultados mensuráveis para sua empresa.
+      </p>
+    </div>
+
+  </div>
+</section>
+
 
   <!-- Portfólio -->
-<section id="portfolio" class="py-20 px-6 bg-black/40 ">
-  <h2 class="text-3xl font-bold text-center mb-12 text-gray-100">Portfólio</h2>
+<section data-aos="fade-up" id="portfolio" class="py-20 px-6 bg-black/40">
+  <h2 class="font-salvatore text-3xl font-bold text-center mb-12 text-gray-100 mt-8">Portfólio</h2>
   
   <!-- Swiper container -->
-  <div class="swiper mySwiper max-w-4xl mx-auto rounded-[32px]">
+  <div class="swiper mySwiper max-w-6xl mx-auto rounded-[32px]">
     <div class="swiper-wrapper">
 
       <!-- Slide 1 -->
-      <div class="swiper-slide relative group bg-gray-500 h-72 rounded-lg overflow-hidden">
-        <img src="./Imagens/Transmissão Ao Vivo.JPG" alt="Transmissão ao vivo" class="h-full w-full object-cover group-hover:scale-110 transition">
-        <div class="absolute inset-0 bg-black/30 flex items-center justify-center text-white font-semibold text-xl">
+      <div class="swiper-slide relative group bg-gray-500 h-96 rounded-lg overflow-hidden">
+        <img src="./Imagens/Transmissão Ao Vivo.webp" alt="Transmissão ao vivo" class="h-full w-full object-cover group-hover:scale-110 transition">
+        <div class="absolute inset-0 bg-black/30 flex items-center justify-center text-gray-200 font-semibold text-3xl">
           Transmissão ao vivo
         </div>
       </div>
 
       <!-- Slide 2 -->
-      <div class="swiper-slide relative group bg-gray-500 h-72 rounded-lg overflow-hidden">
-        <img src="./Imagens/Video Pro.jpg" alt="Vídeo Promocional" class="h-full w-full object-cover group-hover:scale-110 transition">
-        <div class="absolute inset-0 bg-black/30 flex items-center justify-center text-white font-semibold text-xl">
+      <div class="swiper-slide relative group bg-gray-500 h-96 rounded-lg overflow-hidden">
+        <img src="./Imagens/Video Pro.webp" alt="Vídeo Promocional" loading="lazy" class="h-full w-full object-cover group-hover:scale-110 transition">
+        <div class="absolute inset-0 bg-black/30 flex items-center justify-center text-gray-200 font-semibold text-3xl">
           Vídeo Promocional
         </div>
       </div>
 
       <!-- Slide 3 -->
-      <div class="swiper-slide relative group bg-gray-500 h-72 rounded-lg overflow-hidden">
-        <img src="./Imagens/Foto Pro.png" alt="Fotografia Profissional" class="h-full w-full object-cover group-hover:scale-110 transition">
-        <div class="absolute inset-0 bg-black/30 flex items-center justify-center text-white font-semibold text-xl">
+      <div class="swiper-slide relative group bg-gray-500 h-96 rounded-lg overflow-hidden">
+        <img src="./Imagens/Foto Pro.webp" alt="Fotografia Profissional" loading="lazy" class="h-full w-full object-cover group-hover:scale-110 transition">
+        <div class="absolute inset-0 bg-black/30 flex items-center justify-center text-gray-200 font-semibold text-3xl">
           Fotografia Profissional
         </div>
       </div>
 
       <!-- Slide 4 -->
-      <div class="swiper-slide relative group bg-gray-500 h-72 rounded-lg overflow-hidden">
-        <img src="./Imagens/CampanhaDigital.png" alt="Campanha Digital" class="h-full w-full object-cover group-hover:scale-110 transition">
-        <div class="absolute inset-0 bg-black/30 flex items-center justify-center text-white font-semibold text-xl">
+      <div class="swiper-slide relative group bg-gray-500 h-96 rounded-lg overflow-hidden">
+        <img src="./Imagens/CampanhaDigital.webp" alt="Campanha Digital" loading="lazy" class="h-full w-full object-cover group-hover:scale-110 transition">
+        <div class="absolute inset-0 bg-black/30 flex items-center justify-center text-gray-200 font-semibold text-3xl">
           Campanha Digital
         </div>
       </div>
@@ -104,8 +190,7 @@
     <div class="swiper-button-next text-yellow-500 p-5"></div>
     <div class="swiper-button-prev text-yellow-500 p-5"></div>
     
-    <!-- Paginação -->
-    <div class="swiper-pagination"></div>
+
   </div>
 </section>
 
@@ -128,14 +213,14 @@
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    effect: "slide", // pode trocar para "fade", "cube", etc.
+    effect: "fade", // pode trocar para "fade", "cube", etc.
     speed: 800
   });
 </script>
 
   <!-- Contato -->
   <section id="contato" class="py-20 px-6 bg-black/40 text-gray-200 text-center">
-    <h2 class="text-3xl font-bold mb-6">Vamos amplificar sua marca?</h2>
+    <h2 class="font-salvatore text-3xl font-bold mb-6">Vamos amplificar sua marca?</h2>
     <p class="mb-6">Entre em contato pelo WhatsApp ou e-mail e comece hoje mesmo!</p>
     <div class="flex flex-col md:flex-row justify-center gap-4">
       <a href="https://wa.me/5511919837497" target="_blank" class="px-6 py-3 bg-green-500 text-white font-semibold rounded-lg shadow hover:bg-green-600">
@@ -148,7 +233,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="py-8 bg-black text-gray-400">
+  <footer class="py-8 bg-black text-gray-400 font-salvatore">
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-center items-center">
       <p>&copy; 2025 Amplifica. Todos os direitos reservados.</p>
       <!-- <div class="flex space-x-6 mt-4 md:mt-0">
@@ -156,6 +241,29 @@
       </div> -->
     </div>
   </footer>
+
+<script>
+const logo = document.getElementById("logo");
+let ticking = false;
+
+window.addEventListener("scroll", () => {
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      let scrollY = window.scrollY;
+      let scale = Math.min(2, 1 + scrollY / 100);
+      let opacity = Math.max(0, 0.2 - scrollY / 400);
+
+      logo.style.transform = `scale(${scale})`;
+      logo.style.opacity = opacity;
+      ticking = false;
+    });
+    ticking = true;
+  }
+});
+
+</script>
+
+      <script>AOS.init();</script>
 
 </body>
 </html>
