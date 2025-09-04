@@ -89,7 +89,7 @@
 <div id="mobileMenu"
      class="md:hidden fixed top-[80px] left-0 right-0 bg-black/90 backdrop-blur-lg rounded-xl mx-4 p-6 z-40 hidden text-center space-y-4 text-gray-100 shadow-lg border border-gray-700">
   <a href="#servicos" class="block hover:text-yellow-400">Serviços</a>
-  <a href="#portfolio" class="block hover:text-yellow-400">Portfólio</a>
+  <a href="#sobre" class="block hover:text-yellow-400">Sobre nós</a>
   <a href="#contato" class="block hover:text-yellow-400">Contato</a>
   <a href="https://wa.me/5511919837497" aria-label="Falar com a Amplifica pelo WhatsApp"
      class="block mt-4 px-4 py-2 bg-yellow-500 text-black font-semibold rounded-lg shadow hover:bg-yellow-600">
@@ -101,10 +101,11 @@
 <!-- Hero -->
 <section class="relative min-h-[50vh] flex flex-col justify-center items-center text-center px-6 mt-40 mb-40 text-gray-200">
   <!-- Ícone branco atrás -->
-  <img id="logo" src="./Imagens/Icone branco.webp" 
-       alt="Logo da Amplifica"
-       loading="lazy"
-       class="absolute inset-0 m-auto opacity-20 max-h-[40vh] -z-10 md:pl-16" />
+<img id="logo" src="./Imagens/Icone branco.webp" 
+     alt="Logo da Amplifica"
+     loading="lazy"
+     class="absolute inset-0 m-auto opacity-10 max-h-[40vh] -z-10 md:pl-16" />
+
   
   <!-- Conteúdo Hero -->
   <h1 class="font-salvatore text-5xl font-bold mb-6 relative z-10">
@@ -114,8 +115,8 @@
     Marketing, audiovisual e estratégias digitais para sua marca crescer
   </p>
   <a href="#contato"
-     class="px-6 py-3 bg-gray-200/80 text-gray-900 font-semibold rounded-lg shadow hover:bg-yellow-500 relative z-10">
-    Falar com a Amplifica
+    class="px-6 py-3 bg-yellow-500 text-black font-semibold rounded-lg shadow hover:bg-yellow-600 relative z-10">
+    Quero Amplificar
   </a>
 </section>
 
@@ -127,14 +128,19 @@
   <div  class="grid md:grid-cols-3 gap-16">
 
     <!-- Gestão de Redes -->
-    <div  class="text-gray-200 p-8 bg-gray-200/10 border-[1px] border-gray-300/10 rounded-xl shadow hover:scale-105 hover:shadow-lg transition-transform duration-300 hover:bg-yellow-600 hover:-translate-y-2">
-      <!-- Ícone -->
-      <div class="flex justify-center mb-4">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 8a6 6 0 11-12 0 6 6 0 0112 0zM12 14v7m-4-4h8" />
-        </svg>
-      </div>
-      <h3 class="font-semibold text-xl mb-3 text-center">Gestão de Redes</h3>
+      <div class="text-gray-200 p-8 bg-gray-200/10 border border-gray-300/20 
+                  rounded-xl shadow hover:scale-105 hover:shadow-lg 
+                  transition-transform duration-300 hover:border-yellow-500 hover:-translate-y-2">
+        <!-- Ícone -->
+        <div class="flex justify-center mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" 
+              class="h-12 w-12 text-yellow-500 group-hover:animate-pulse" 
+              fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M18 8a6 6 0 11-12 0 6 6 0 0112 0zM12 14v7m-4-4h8" />
+          </svg>
+        </div>
+        <h3 class="font-semibold text-xl mb-3 text-center">Gestão de Redes</h3>
       <p class="text-center">
         Criamos estratégias personalizadas para aumentar engajamento e relevância. 
         Desde o planejamento até a análise de métricas, cuidamos de toda a gestão 
@@ -144,7 +150,9 @@
 
 
     <!-- Produção Audiovisual -->
-    <div class="text-gray-200 p-8 bg-gray-200/10 border-[1px] border-gray-300/10 rounded-xl shadow hover:scale-105 hover:shadow-lg transition-transform duration-300 hover:bg-yellow-600 hover:-translate-y-2">
+    <div class="text-gray-200 p-8 bg-gray-200/10 border border-gray-300/20 
+                  rounded-xl shadow hover:scale-105 hover:shadow-lg 
+                  transition-transform duration-300 hover:border-yellow-500 hover:-translate-y-2">
       <!-- Ícone -->
       <div class="flex justify-center mb-4">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -160,7 +168,9 @@
     </div>
 
     <!-- Campanhas Digitais -->
-    <div class="text-gray-200 p-8 bg-gray-200/10 border-[1px] border-gray-300/10 rounded-xl shadow hover:scale-105 hover:shadow-lg transition-transform duration-300 hover:bg-yellow-600 hover:-translate-y-2">
+    <div class="text-gray-200 p-8 bg-gray-200/10 border border-gray-300/20 
+                  rounded-xl shadow hover:scale-105 hover:shadow-lg 
+                  transition-transform duration-300 hover:border-yellow-500 hover:-translate-y-2">
       <!-- Ícone -->
       <div class="flex justify-center mb-4">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -179,8 +189,8 @@
 </section>
 
 
-  <!-- Portfólio -->
-<section data-aos="fade-up" id="portfolio" class=" py-12 px-6 mb-40">
+  <!-- Carrossel -->
+<section data-aos="fade-up" id="carrossel" class=" py-12 px-6 mb-40">
   <!-- Swiper container -->
   <div class="swiper mySwiper max-w-[1100px] mx-auto rounded-[32px]">
     <div class="swiper-wrapper">
@@ -265,7 +275,7 @@
 
     <!-- Conteúdo -->
     <div class="flex-1 text-center md:text-left" data-aos="fade-left">
-      <h2 class="font-salvatore text-4xl font-bold text-yellow-400 mb-6">
+      <h2 class="font-salvatore text-4xl font-bold text-yellow-400 mb-6  uppercase drop-shadow-lg">
         Sobre a Amplifica
       </h2>
       <p class="text-lg leading-relaxed text-gray-300 mb-6">
@@ -286,11 +296,31 @@
 
   </div>
 </section>
+  <!-- Clientes -->
+
+<section id="clientes" class="py-20 px-6 bg-black/40 text-gray-200 text-center overflow-hidden">
+  <h2 class="font-salvatore text-3xl font-bold mb-8 text-yellow-400 uppercase drop-shadow-lg">
+    Marcas que já confiaram
+  </h2>
+
+  <div class="relative w-full max-w-5xl mx-auto overflow-hidden">
+    <div class="flex items-center justify-center space-x-8">
+      
+      <!-- Faixa 1 -->
+      <div class="scroll-wrapper flex gap-16">
+        <img src="./Imagens/logo1.jpg" alt="Cliente 1" class="h-16 grayscale hover:grayscale-0 transition rounded-lg" />
+        <img src="./Imagens/logo2.png" alt="Cliente 2" class="h-16 grayscale hover:grayscale-0 transition rounded-lg" />
+        <img src="./Imagens/logo3.jpeg" alt="Cliente 3" class="h-16 grayscale hover:grayscale-0 transition rounded-lg" />
+
+    </div>
+  </div>
+</section>
+
 
 
   <!-- Contato -->
   <section id="contato" class="py-20 px-6 bg-black/40 text-gray-200 text-center">
-    <h2 class="font-salvatore text-3xl font-bold mb-6">Vamos amplificar sua marca?</h2>
+    <h2 class="font-salvatore text-3xl font-bold mb-8 text-yellow-400 uppercase drop-shadow-lg">Vamos amplificar sua marca?</h2>
     <p class="mb-6">Entre em contato pelo WhatsApp ou e-mail e comece hoje mesmo!</p>
     <div class="flex flex-col md:flex-row justify-center gap-4">
       <a href="https://wa.me/5511919837497" aria-label="Falar com a Amplifica pelo WhatsApp" target="_blank" class="px-6 py-3 bg-green-500 text-white font-semibold rounded-lg shadow hover:bg-green-600">
@@ -311,9 +341,10 @@
       </div> -->
     </div>
   </footer>
-
+  <!-- Animação logo -->
   <script>
       const logo = document.getElementById("logo");
+      
       let ticking = false;
 
       window.addEventListener("scroll", () => {
@@ -321,17 +352,22 @@
           window.requestAnimationFrame(() => {
             let scrollY = window.scrollY;
             let scale = Math.min(2, 1 + scrollY / 100);
-            let opacity = Math.max(0, 0.2 - scrollY / 400);
-
+            let opacity = Math.max(0, 0.2 - scrollY / 500);
+            logo.style.transform = `translateY(${scrollY * 0.2}px) scale(1)`;
             logo.style.transform = `scale(${scale})`;
             logo.style.opacity = opacity;
             ticking = false;
           });
           ticking = true;
         }
+        
       });
+      
 
     </script>
+
+
+  <!-- Script menu mobile -->
 
     <script>
   const menuToggle = document.getElementById('menuToggle');
