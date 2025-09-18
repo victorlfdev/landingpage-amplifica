@@ -36,17 +36,21 @@ O projeto foi desenvolvido com **HTML5, TailwindCSS, SwiperJS e AOS** para criar
 ## 🛠 Como rodar o projeto localmente
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/amplifica-site.git
+   git clone https://github.com/victorlfdev/landingpage-amplifica.git
 Acesse a pasta:
 
-cd amplifica-site
+cd landingpage-amplifica
+
 Abra o arquivo index.html no navegador ou use uma extensão como Live Server no VS Code.
 
-📬 Contato
-💼 Amplifica - Amplificando ideias, criando conexões
-📱 WhatsApp: Clique aqui
+📬 Contato:
+
+💼 Amplifica - Amplificando ideias, criando conexões.
+
 📷 Instagram: @amplifica.estudio
+
 ✉️ E-mail: amplifica@usd21.org
+
 
 ✨ Desenvolvido com dedicação para amplificar marcas e ideias!
 
