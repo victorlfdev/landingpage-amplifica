@@ -31,9 +31,6 @@ O projeto foi desenvolvido com **HTML5, TailwindCSS, SwiperJS e AOS** para criar
 ├── style.css # Estilos adicionais
 └── README.md # Este arquivo
 
-yaml
-Copiar código
-
 ---
 
 ## 🛠 Como rodar o projeto localmente
@@ -42,20 +39,8 @@ Copiar código
    git clone https://github.com/seu-usuario/amplifica-site.git
 Acesse a pasta:
 
-bash
-Copiar código
 cd amplifica-site
 Abra o arquivo index.html no navegador ou use uma extensão como Live Server no VS Code.
-
-🌍 Deploy
-O site pode ser hospedado facilmente no Vercel, Netlify ou GitHub Pages.
-Exemplo de deploy com GitHub Pages:
-
-Vá em Configurações > Pages
-
-Escolha a branch main e a pasta /root
-
-Salve e acesse o link gerado.
 
 📬 Contato
 💼 Amplifica - Amplificando ideias, criando conexões
