@@ -15,3 +15,28 @@
   font-style: normal;
 }
 
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden !important;
+  touch-action: pan-y; /* bloqueia o zoom lateral com gesto */
+}
+
+body {
+  position: relative;
+}
+
+/* Corrige bug do gradiente no fundo */
+.bg-gradient-to-tr {
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hover\\:scale-105:hover {
+  transform: scale(1.05);
+  overflow: hidden;
+}
+
+
+ 
